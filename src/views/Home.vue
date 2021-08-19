@@ -1,6 +1,6 @@
 <template>
   <div class="min-w-full min-h-screen bg-gray-100 flex">
-    <div class="sidebar flex-grow-0">
+    <div class="sidebar flex-grow-0 hidden md:block">
       <div class="w-full h-full flex flex-col items-center">
         <div
           class="
@@ -121,9 +121,18 @@
           </div>
         </div>
       </nav>
-      <main class="px-4 pt-6 container mx-auto">
-        <div class="grid grid-cols-11 space-x-4 w-full h-full">
-          <div class="col-span-2 max-h-screen overflow-y-auto pb-32">
+      <main class="px-4 pt-2 md:pt-6 container mx-auto">
+        <div class="grid grid-cols-11 md:space-x-4 w-full h-full">
+          <div
+            class="
+              col-span-2
+              max-h-screen
+              overflow-y-auto
+              pb-32
+              hidden
+              md:block
+            "
+          >
             <ul class="surah flex flex-col space-y-4 px-1">
               <li v-for="item in listSurah" :key="item.number">
                 <button
@@ -148,7 +157,9 @@
               </li>
             </ul>
           </div>
-          <div class="col-span-7 max-h-screen overflow-y-auto pb-52">
+          <div
+            class="col-span-11 md:col-span-7 max-h-screen overflow-y-auto pb-52"
+          >
             <transition name="fade">
               <ul v-if="isLoading" class="ayat flex flex-col space-y-4">
                 <li>
@@ -237,7 +248,18 @@
               </ul>
             </transition>
           </div>
-          <div class="col-span-2 bg-white h-auto rounded-lg p-4 text-left">
+          <div
+            class="
+              col-span-2
+              bg-white
+              h-auto
+              rounded-lg
+              p-4
+              text-left
+              hidden
+              md:block
+            "
+          >
             <h3 class="mb-4">Settings</h3>
             <div>
               <h3 class="text-sm font-bold flex justify-between items-center">
