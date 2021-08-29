@@ -19,6 +19,7 @@
         <ul>
           <li class="font-bold">
             <div
+              style="-webkit-tap-highlight-color: transparent"
               class="
                 flex
                 items-center
@@ -40,6 +41,7 @@
 
               <ul
                 class="
+                  select-none
                   absolute
                   hidden
                   group-hover:block
@@ -48,7 +50,7 @@
                   bg-white
                   rounded-md
                   shadow
-                  top-12
+                  top-14
                   z-40
                   right-0
                   p-2
