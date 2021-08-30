@@ -10,20 +10,32 @@
       select-none
     "
   >
-    <div class="flex h-16">
+    <div class="flex h-16 px-4">
       <div
-        class="hover:bg-gray-50 flex-grow flex justify-center items-center"
+        class="flex-grow flex justify-center items-center"
         @click="moveMenu(1)"
       >
-        <div
-          :class="
-            active === 1
-              ? 'bg-green-100 px-5 py-2 rounded-full text-green-600'
-              : ''
-          "
-        >
+        <div class="relative w-4/5 px-4 py-2">
+          <div
+            style="z-index: -1"
+            class="
+              absolute
+              h-full
+              w-full
+              top-0
+              left-0
+              transform
+              animate-fade-in-right
+              duration-300
+            "
+            :class="
+              active === 1
+                ? 'bg-green-100  rounded-full text-green-600 scale-x-100'
+                : '-scale-x-1'
+            "
+          ></div>
           <img
-            src="@/assets/book-outline.svg"
+            src="@/assets/book-outline-black.svg"
             alt="icon"
             :class="active === 1 ? 'w-4 inline-block mr-2' : 'w-5'"
           />
@@ -31,16 +43,28 @@
         </div>
       </div>
       <div
-        class="hover:bg-gray-50 flex-grow flex justify-center items-center"
+        class="flex-grow flex justify-center items-center"
         @click="moveMenu(2)"
       >
-        <div
-          :class="
-            active === 2
-              ? 'bg-green-100 px-5 py-2 rounded-full text-green-600'
-              : ''
-          "
-        >
+        <div class="relative w-4/5 px-4 py-2">
+          <div
+            style="z-index: -1"
+            class="
+              absolute
+              h-full
+              w-full
+              top-0
+              left-0
+              transform
+              animate-fade-in-right
+              duration-300
+            "
+            :class="
+              active === 2
+                ? 'bg-green-100  rounded-full text-green-600 scale-x-100'
+                : '-scale-x-1'
+            "
+          ></div>
           <img
             src="@/assets/heart.svg"
             alt="icon"
@@ -50,16 +74,28 @@
         </div>
       </div>
       <div
-        class="hover:bg-gray-50 flex-grow flex justify-center items-center"
+        class="flex-grow flex justify-center items-center"
         @click="moveMenu(3)"
       >
-        <div
-          :class="
-            active === 3
-              ? 'bg-green-100 px-5 py-2 rounded-full text-green-600'
-              : ''
-          "
-        >
+        <div class="relative w-4/5 px-4 py-2">
+          <div
+            style="z-index: -1"
+            class="
+              absolute
+              h-full
+              w-full
+              top-0
+              left-0
+              transform
+              animate-fade-in-right
+              duration-300
+            "
+            :class="
+              active === 3
+                ? 'bg-green-100  rounded-full text-green-600 scale-x-100'
+                : '-scale-x-1'
+            "
+          ></div>
           <img
             src="@/assets/search.svg"
             alt="icon"
