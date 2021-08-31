@@ -1,6 +1,7 @@
 <template>
   <div
     class="
+      md:hidden
       bg-white
       h-16
       w-full
@@ -30,16 +31,21 @@
             "
             :class="
               active === 1
-                ? 'bg-green-100  rounded-full text-green-600 scale-x-100'
+                ? 'bg-green-100  rounded-full scale-x-100'
                 : '-scale-x-1'
             "
           ></div>
           <img
             src="@/assets/book-outline-black.svg"
             alt="icon"
-            :class="active === 1 ? 'w-4 inline-block mr-2' : 'w-5'"
+            class="filter"
+            :class="
+              active === 1 ? 'w-4 filter-green inline-block mr-2 ' : 'w-5'
+            "
           />
-          <small :class="active === 1 ? '' : 'hidden'">Reading</small>
+          <small :class="active === 1 ? 'text-green-600' : 'hidden'"
+            >Reading</small
+          >
         </div>
       </div>
       <div
@@ -68,9 +74,13 @@
           <img
             src="@/assets/heart.svg"
             alt="icon"
-            :class="active === 2 ? 'w-4 inline-block mr-2' : 'w-5'"
+            :class="
+              active === 2 ? 'w-4 inline-block mr-2 filter filter-green' : 'w-5'
+            "
           />
-          <small :class="active === 2 ? '' : 'hidden'">Favorite</small>
+          <small :class="active === 2 ? 'text-green-600' : 'hidden'"
+            >Favorite</small
+          >
         </div>
       </div>
       <div
@@ -99,9 +109,13 @@
           <img
             src="@/assets/search.svg"
             alt="icon"
-            :class="active === 3 ? 'w-4 inline-block mr-2' : 'w-5'"
+            :class="
+              active === 3 ? 'w-4 inline-block mr-2 filter filter-green' : 'w-5'
+            "
           />
-          <small :class="active === 3 ? '' : 'hidden'">Search</small>
+          <small :class="active === 3 ? 'text-green-600' : 'hidden'"
+            >Search</small
+          >
         </div>
       </div>
     </div>
@@ -124,3 +138,10 @@ export default {
   },
 };
 </script>
+
+<style lang="postcss" scoped>
+.filter-green {
+  filter: invert(70%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+    brightness(70%) contrast(100%);
+}
+</style>
