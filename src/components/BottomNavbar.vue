@@ -128,12 +128,14 @@ export default {
   data() {
     return {
       menu: [1, 2, 3],
+      menuString: ["Home", "Favorite", "Search"],
       active: 1,
     };
   },
   methods: {
     moveMenu(key) {
       this.active = key;
+      this.$emit("changePage", this.menuString[key - 1]);
     },
   },
 };
